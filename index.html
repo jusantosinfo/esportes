@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Esportes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    H2{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold; /* Define o texto em negrito */
+  line-height: 0.8; /* Adiciona um pouco de espaçamento entre as linhas */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
+      align-items: center; /* Alinha os elementos verticalmente */
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Estilos para os botões */
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-right: 6px; /* Adiciona margem à direita para separar os botões */
+    }
+
+    /* Estilos quando o mouse passa por cima dos botões */
+    button:hover {
+      background-color: #727171;
+    }
+
+    /* Estilos para os botões quando estão focados */
+    button:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4); /* Adiciona uma borda azul quando o botão está focado */
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    #imageContainer {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      margin-bottom: 20px; /* Espaço entre a imagem e o próximo conteúdo */
+    }
+
+    #imageContainer img {
+      width: 100%;
+      height: auto;
+    }
+
+    #imageText {
+  position: absolute;
+  top: 75px;
+  right: 100px;
+  color: rgb(88, 88, 88);
+  font-size: 140px; /* Aumenta o tamanho da fonte */
+  font-weight: bold; /* Define o texto em negrito */
+  line-height: 0.8; /* Adiciona um pouco de espaçamento entre as linhas */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -6px;
+
+}
+#cardContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card button {
+  color: #fff; /* Cor do texto */
+  background-color: #333; /* Cor de fundo azul */
+  border: 2px solid #333; /* Borda sólida com a cor de fundo */
+  padding: 8px 16px; /* Espaçamento interno */
+  border-radius: 20px; /* Borda arredondada */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave da cor de fundo e cor do texto */
+}
+
+.card button:hover {
+  background-color: rgb(88, 88, 88)* Altera a cor de fundo ao passar o mouse */
+}
+
+.card button:focus {
+  outline: none; /* Remove o contorno ao focar */
+}
+
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .assinar {
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+
+    /* Estilos de contraste */
+    .high-contrast {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .black-and-white {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .blue-contrast {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .green-contrast {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .yellow-contrast {
+      background-color: #ffc107;
+      color: #000;
+    }
+
+    /* Estilos para alinhar a navegação à direita */
+    .right-align {
+      margin-left: auto; /* Empurra a navegação para a direita */
+    }
+    p{
+      font-size: 20px;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Regra 2: Não altere a semântica de elementos nativos do HTML -->
+    <h1>Site de Esportes</h1>
+    <nav class="right-align">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Notícias</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+
+    <div id="contrastOptions">
+      <center>
+        <button id="blackAndWhite">Preto e Branco</button>
+        <button id="highContrast">Alto Contraste</button>
+        <button id="blueContrast">Azul</button>
+        <button id="greenContrast">Verde</button>
+        <button id="yellowContrast">Amarelo</button>
+      </center>
+    </div>
+
+    <div id="imageContainer">
+      <!-- Aqui você pode adicionar sua imagem -->
+      <img src="capa site.png" alt="Descrição da imagem">
+      <div id="imageText">SPORT <br>NEWS</div>
+    </div>
+
+    <CENTER><h2>ÚLTIMAS NOTÍCIAS</h2></CENTER>
+    <article>
+    
+      <div id="cardContainer">
+        <div class="card">
+          
+          <center><h3>Escalação do Palmeiras</h3></center>
+         <center> <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/10/palmeiras-sao-paulo-goleada-e1698284333189.jpg?w=1220&h=674&crop=1"   width="550px" height="300px"  border-radius="4px" alt="Imagem da Notícia 1"></center>
+          <p>Confira a provável escalação de Abel para o Palmeiras neste próximo domingo, juntamente com as estratégias táticas e as expectativas para o confronto.</p>
+          <button>Leia mais</button>
+        </div>
+        <div class="card">
+         
+          <center><h3>Olímpiadas 2024</h3></center>
+          <img src="https://classic.exame.com/wp-content/uploads/2021/08/2017-09-13t180835z_1034261153_rc18d9d83620_rtrmadp_3_olympics-2024.jpg?quality=70&strip=info&w=1024" width="550px" height="300px" alt="Imagem da Notícia 2">
+          <p>Fique por dentro de todas as últimas notícias emocionantes sobre as Olimpíadas, incluindo atualizações sobre os atletas, os resultados das competições e os momentos mais marcantes do evento esportivo mundial.</p>
+          <button>Leia mais</button>
+        </div>
+        <div class="card">
+        
+          <center><h3>Final Campeonato Paulista</h3></center>
+          <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt3fe41aa41f5c053f/624a1d0f79bbe30888ecd6f9/GettyImages-1239727216.jpg?auto=webp&format=pjpg&width=3840&quality=60" width="550px" height="300px" alt="Imagem da Notícia 3">
+          <p>Não perca nenhum detalhe da emocionante Final do Campeonato Paulista 2024: saiba quando acontecerá, onde assistir, os horários e todas as informações adicionais que você precisa!</p>
+          <button>Leia mais</button>
+        </div>
+      </div>
+      
+      <p>Descrição da notícia...</p>
+      <a href="#">Leia mais</a>
+    </article>
+
+    <div id="assinar">
+      <!-- Regra 5: Todos os elementos devem ter um nome acessível -->
+      <label for="newsletter">Assine nossa newsletter:</label>
+      <input type="email" id="newsletter" placeholder="Digite seu email">
+      <button type="submit">Assinar</button>
+    </div>
+
+  <footer>
+    <p>© 2024 - Site de Esportes. Desenvolvido por Julia Santos</p>
+  </footer>
+
+  <script>
+    const blackAndWhiteBtn = document.getElementById('blackAndWhite');
+    document.body.classList.remove('high-contrast', 'black-and-white', 'green-contrast', 'yellow-contrast');
+    document.body.classList.add('blue-contrast');
+    // Adiciona a classe "blue-font" aos cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.style.color = '#383838'; // Define a cor azul para as fontes dos cards
+    });
+  
+    const highContrastBtn = document.getElementById('highContrast');
+   
+    const greenContrastBtn = document.getElementById('greenContrast');
+    const yellowContrastBtn = document.getElementById('yellowContrast');
+    const blueContrastBtn = document.getElementById('blueContrast');
+
+  blueContrastBtn.addEventListener('click', function() {
+    document.body.classList.remove('high-contrast', 'black-and-white', 'green-contrast', 'yellow-contrast');
+    document.body.classList.add('blue-contrast');
+    // Adiciona a classe "blue-font" aos cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.style.color = '#383838'; // Define a cor azul para as fontes dos cards
+    });
+  });
+    
+
+    blackAndWhiteBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'blue-contrast', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('black-and-white');
+    });
+
+    highContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('black-and-white', 'blue-contrast', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('high-contrast');
+    });
+
+    blueContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('blue-contrast');
+    });
+
+    greenContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'blue-contrast', 'yellow-contrast');
+      document.body.classList.add('green-contrast');
+    });
+
+    yellowContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'blue-contrast', 'green-contrast');
+      document.body.classList.add('yellow-contrast');
+    });
+  </script>
+
+</body>
+</html>
